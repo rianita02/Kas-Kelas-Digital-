@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hak Akses Pengguna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Hak Akses Pengguna</h1>
+
+  <p>Aturan akses aplikasi Kas Kelas Digital:</p>
+
+  <ul>
+    <li>Bendahara: dapat mengelola data kas.</li>
+    <li>Siswa: hanya dapat melihat data.</li>
+    <li>Wali kelas: hanya dapat melihat data.</li>
+  </ul>
+
+  <a href="dashboard.html">Kembali ke Dashboard</a>
+  
+<script>
+  const role = sessionStorage.getItem("kasRole");
+
+  if (!role) {
+    window.location.href = "index.html";
+  }
+
+  const judul = document.querySelector("h1");
+  judul.textContent = "Hak Akses Pengguna";
+
+  const keterangan = document.createElement("p");
+  keterangan.textContent = "Peran pengguna saat ini: " + role;
+  judul.insertAdjacentElement("afterend", keterangan);
+</script>
+</body>
+</html>

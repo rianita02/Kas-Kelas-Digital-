@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kas Kelas Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <div>
+                <h1>Kas Kelas Digital</h1>
+                <p id="welcome">Selamat datang!</p>
+            </div>
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+        </header>
+
+        <h2>Dashboard</h2>
+        <p>Ringkasan keuangan kelas</p>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Saldo Kas</h3>
+                <p id="saldo">Rp0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Pemasukan</h3>
+                <p id="pemasukan">Rp0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Pengeluaran</h3>
+                <p id="pengeluaran">Rp0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Jumlah Siswa</h3>
+                <p id="jumlahSiswa">0 siswa</p>
+            </div>
+        </section>
+
+        <h2>Menu Utama</h2>
+        <section class="menu-grid">
+            <a href="data-siswa.html" class="menu-card">👨‍🎓<br>Data Siswa</a>
+            <a href="pemasukan.html" class="menu-card">💰<br>Pemasukan</a>
+            <a href="pengeluaran.html" class="menu-card">🧾<br>Pengeluaran</a>
+<a href="notifikasi.html" class="menu-card">🔔<br>Notifikasi Pembayaran</a>
+<a href="laporan.html" class="menu-card">📊<br>Laporan Keuangan</a>
+            <a href="#" class="menu-card">💵<br>Saldo Kas</a>
+<a href="hak-akses.html">Hak Akses Pengguna</a>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa - Kas Kelas Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        
+<a href="dashboard.html"
+   style="display:inline-block; background:#e92323; color:white; padding:12px 24px; border-radius:10px; text-decoration:none; cursor:pointer;">
+  Kembali
+</a>
+
+            <div>
+                <h1>Data Siswa</h1>
+                <p>Daftar siswa kelas</p>
+            </div>
+            
+<button
+  type="button"
+  onclick="window.location.href='dashboard.html'"
+  style="background: #e92323; color: white; border: none; padding: 12px 24px; border-radius: 10px; cursor: pointer;">
+  Kembali
+</button>
+
+        </header>
+
+        <section class="summary-card">
+            <h3>Jumlah Siswa</h3>
+            <p id="jumlahSiswa">0 siswa</p>
+        </section>
+
+        <section id="formSiswa" class="summary-card">
+            <h2>Tambah Data Siswa</h2>
+
+            <form id="studentForm">
+                <label for="nis">NIS</label>
+                <input id="nis" type="text" required
+                    placeholder="Masukkan NIS">
+
+                <label for="nama">Nama Siswa</label>
+                <input id="nama" type="text" required
+                    placeholder="Masukkan nama siswa">
+
+                <label for="kelas">Kelas</label>
+                <input id="kelas" type="text" required
+                    placeholder="Contoh: VIII A">
+
+                <button type="submit">Simpan Data</button>
+                <p id="pesan"></p>
+            </form>
+        </section>
+
+        <section class="summary-card" style="margin-top: 20px;">
+            <h2>Daftar Siswa</h2>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>NIS</th>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarSiswa"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="data-siswa.js"></script>
+</body>
+</html>

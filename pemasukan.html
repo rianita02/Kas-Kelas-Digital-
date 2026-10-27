@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemasukan Kas - Kas Kelas Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header class="dashboard-header">
+            <div>
+                <h1>Pemasukan Kas</h1>
+                <p>Catat pembayaran kas siswa</p>
+            </div>
+            <button class="logout-button" onclick="kembaliDashboard()">
+                Kembali
+            </button>
+        </header>
+
+        <section class="summary-card">
+            <h2>Total Pemasukan</h2>
+            <p id="totalPemasukan">Rp0</p>
+        </section>
+
+        <section id="formPemasukan" class="summary-card"
+            style="margin-top:20px;">
+            <h2>Tambah Pembayaran</h2>
+
+            <form id="paymentForm">
+                <label for="nis">NIS Siswa</label>
+                <input id="nis" required placeholder="Masukkan NIS siswa">
+
+                <label for="namaSiswa">Nama Siswa</label>
+                <input id="namaSiswa" required
+                    placeholder="Masukkan nama siswa">
+
+                <label for="tanggal">Tanggal Pembayaran</label>
+                <input id="tanggal" type="date" required>
+
+                <label for="bulan">Pembayaran Bulan</label>
+                <select id="bulan" required>
+                    <option value="">Pilih bulan</option>
+                    <option>Januari</option>
+                    <option>Februari</option>
+                    <option>Maret</option>
+                    <option>April</option>
+                    <option>Mei</option>
+                    <option>Juni</option>
+                    <option>Juli</option>
+                    <option>Agustus</option>
+                    <option>September</option>
+                    <option>Oktober</option>
+                    <option>November</option>
+                    <option>Desember</option>
+                </select>
+
+                <label for="nominal">Nominal Pembayaran (Rp)</label>
+                <input id="nominal" type="number" min="1" step="1"
+                    required placeholder="Contoh: 5000">
+
+                <label for="keterangan">Keterangan</label>
+                <input id="keterangan" placeholder="Contoh: Kas bulanan">
+
+                <button type="submit">Simpan Pembayaran</button>
+                <p id="pesanPemasukan"></p>
+            </form>
+        </section>
+
+        <section class="summary-card" style="margin-top:20px;">
+            <h2>Riwayat Pembayaran</h2>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>NIS</th>
+                            <th>Nama</th>
+                            <th>Bulan</th>
+                            <th>Nominal</th>
+                            <th>Keterangan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riwayatPemasukan"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="pemasukan.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi Pembayaran - Kas Kelas Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header class="dashboard-header">
+            <div>
+                <h1>Notifikasi Pembayaran</h1>
+                <p>Status pembayaran kas siswa</p>
+            </div>
+            <button class="logout-button" onclick="kembaliDashboard()">
+                Kembali
+            </button>
+        </header>
+
+        <section class="summary-card">
+            <label for="bulan">Pilih Bulan Pembayaran</label>
+            <select id="bulan">
+                <option>Januari</option>
+                <option>Februari</option>
+                <option>Maret</option>
+                <option>April</option>
+                <option>Mei</option>
+                <option>Juni</option>
+                <option>Juli</option>
+                <option>Agustus</option>
+                <option>September</option>
+                <option>Oktober</option>
+                <option>November</option>
+                <option>Desember</option>
+            </select>
+
+            <label for="tahun">Tahun Pembayaran</label>
+            <input type="number" id="tahun" min="2000" max="2100">
+
+            <button type="button" id="tombolPeriksa">
+                Periksa Pembayaran
+            </button>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Sudah Membayar</h3>
+                <p id="sudahBayar">0 siswa</p>
+            </div>
+            <div class="summary-card">
+                <h3>Belum Membayar</h3>
+                <p id="belumBayar">0 siswa</p>
+            </div>
+        </section>
+
+        <section class="summary-card">
+            <h2>Status Siswa</h2>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>NIS</th>
+                            <th>Nama Siswa</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarStatus"></tbody>
+                </table>
+            </div>
+            <p id="pesanStatus"></p>
+        </section>
+    </main>
+
+    <script src="notifikasi.js"></script>
+</body>
+</html>

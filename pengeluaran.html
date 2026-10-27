@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengeluaran Kas - Kas Kelas Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header class="dashboard-header">
+            <div>
+                <h1>Pengeluaran Kas</h1>
+                <p>Catat penggunaan uang kas kelas</p>
+            </div>
+            <button class="logout-button" onclick="kembaliDashboard()">
+                Kembali
+            </button>
+        </header>
+
+        <section class="summary-card">
+            <h2>Total Pengeluaran</h2>
+            <p id="totalPengeluaran">Rp0</p>
+        </section>
+
+        <section id="formPengeluaran" class="summary-card"
+            style="margin-top:20px;">
+            <h2>Tambah Pengeluaran</h2>
+
+            <form id="expenseForm">
+                <label for="tanggal">Tanggal Pengeluaran</label>
+                <input id="tanggal" type="date" required>
+
+                <label for="kategori">Kategori Pengeluaran</label>
+                <select id="kategori" required>
+                    <option value="">Pilih kategori</option>
+                    <option>Perlengkapan kelas</option>
+                    <option>Kebersihan</option>
+                    <option>Dekorasi kelas</option>
+                    <option>Kegiatan kelas</option>
+                    <option>Lainnya</option>
+                </select>
+
+                <label for="nominal">Nominal Pengeluaran (Rp)</label>
+                <input id="nominal" type="number" min="1" step="1"
+                    placeholder="Contoh: 25000" required>
+
+                <label for="keterangan">Keterangan</label>
+                <input id="keterangan" type="text"
+                    placeholder="Contoh: Membeli sapu dan pel">
+
+                <button type="submit">Simpan Pengeluaran</button>
+                <p id="pesanPengeluaran"></p>
+            </form>
+        </section>
+
+        <section class="summary-card" style="margin-top:20px;">
+            <h2>Riwayat Pengeluaran</h2>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Kategori</th>
+                            <th>Nominal</th>
+                            <th>Keterangan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riwayatPengeluaran"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="pengeluaran.js"></script>
+</body>
+</html>

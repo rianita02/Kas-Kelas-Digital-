@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Keuangan - Kas Kelas Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header class="dashboard-header">
+            <div>
+                <h1>Laporan Keuangan</h1>
+                <p>Ringkasan keuangan kas kelas</p>
+            </div>
+            <button class="logout-button" onclick="kembaliDashboard()">
+                Kembali
+            </button>
+        </header>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Pemasukan</h3>
+                <p id="totalPemasukan">Rp0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Pengeluaran</h3>
+                <p id="totalPengeluaran">Rp0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Saldo Akhir</h3>
+                <p id="saldoAkhir">Rp0</p>
+            </div>
+        </section>
+
+        <section class="summary-card">
+            <h2>Riwayat Transaksi</h2>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Jenis Transaksi</th>
+                            <th>Keterangan</th>
+                            <th>Nominal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riwayatLaporan"></tbody>
+                </table>
+            </div>
+
+            <p id="pesanLaporan"></p>
+            <button id="cetakLaporan" type="button">
+                Cetak Laporan
+            </button>
+        </section>
+    </main>
+
+    <script src="laporan.js"></script>
+</body>
+</html>
